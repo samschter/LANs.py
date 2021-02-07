@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 '''
 Description:   ARP poisons a LAN victim and prints all the interesting unencrypted info like usernames, passwords and messages. Asynchronous multithreaded arp spoofing packet parser.
@@ -180,7 +180,7 @@ def LANsMain(args):
     else:
         au = active_users()
         au.users(IPprefix, routerIP)
-        print '\n[*] Turning off monitor mode'
+        print ('\n[*] Turning off monitor mode')
         os.system('airmon-ng stop %s >/dev/null 2>&1' % au.monmode)
         try:
             victimIP = raw_input('[*] Enter the non-router IP to spoof: ')
