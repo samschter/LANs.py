@@ -180,7 +180,7 @@ def LANsMain(args):
     else:
         au = active_users()
         au.users(IPprefix, routerIP)
-        print ('\n[*] Turning off monitor mode')
+        print '\n[*] Turning off monitor mode'
         os.system('airmon-ng stop %s >/dev/null 2>&1' % au.monmode)
         try:
             victimIP = raw_input('[*] Enter the non-router IP to spoof: ')
